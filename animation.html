@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+	<script src="jquery.min.js"></script>
+	<style type="text/css">
+		#circle{
+			width:150px;
+			height:150px;
+			border-radius: 50%;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="circle"></div>
+	<script type="text/javascript">
+
+		$("#circle").click(function() {
+			if ($(this).css("width") == "150px") {
+				$(this).animate({
+					width: "400px",
+					height: "400px",
+					marginLeft: "120px",
+					marginTop: "120px"
+				}, 2000, function() {
+					$(this).css("background-color", "red");
+				});
+			} 
+			else {
+				alert($(this).css("background-color"));
+				$(this).animate({
+					width: "150px",
+					height: "150px",
+					marginLeft: "0",
+					marginTop: "0"
+				}, 2000, function() {
+					$(this).css("background-color", "green");
+				});
+
+			}
+
+		});
+	</script>
+</body>
+</html>
