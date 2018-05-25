@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+	<script src="jquery.min.js"></script>
+	<style type="text/css">
+		.square{
+			width:150px;
+			height:150px;
+			background-color: red;
+			margin: 10px;
+		}
+		#circle{
+			width:150px;
+			height:150px;
+			border-radius: 50%;
+			background-color: green;
+			margin: 10px;
+		}
+		#hiddenText{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+	<p id="text">This is a new text!</p>
+	<button id="fadeout">Toggle text button</button>
+	<button id="fadein">Fade in button</button>
+	<div id="circle"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<script type="text/javascript">
+		var textshowing=true;
+		$("#fadeout").click(function() {
+			if (textshowing) {
+				$("#text").fadeOut(function(){
+					textshowing=false;
+				});
+			} else {
+				$("#text").fadeIn(function(){
+					textshowing= true;
+				});
+			}
+
+		});
+		
+
+
+	</script>
+</body>
+</html>
